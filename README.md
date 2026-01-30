@@ -1,13 +1,13 @@
-#Dice Paraodx - Odds of doubles are 1/6  or 1/11 ?
+# Dice Paraodx - Odds of doubles are 1/6  or 1/11 ?
 
-#Background and Explanation
+# Background and Explanation
 
 A person rolls two dice, hidden from view.  They peek at one of the dice, and says "I saw one of the dice and it was a 1". You are then asked what are the odds that the other dice also is a 1? The official explanation is that the answer is 1/11 . The actual answer is 1/6. We will now explore why the official answer is wrong and why our python code detects 1/6. 
 
-#About The Program
+# About The Program
 The program is designed to walk through the exact same scenario.  The dice are "rolled" using random number generation.  Another random number is generated to determine which dies is "peeked at".  We then check the other dice to see if its a double, and we record the success and failures of each individual number. At the end of the program, the results are displayed with the percents displayed in decimal form.  
 
-#Probabilities and Explanation
+# Probabilities and Explanation
 There are 11 permutations of dice A and dice B with a 1 in it:
 (1,1)  - the only set of doubles
 (1,2) (1,3) (1,4) (1,5) (1,6)
@@ -22,7 +22,7 @@ Now, this is not true for a roll with only a single 1 in it.  For example, lets 
 The end result of the difference in the rate of detection between double 1's (1,1) and all other rolls with at least one 1 (1,x or x,1) is that the double 1's (1,1) are detected twice as much as all other pairs (1,x). This is what inevitable makes the 1/11 calculation wrong. Since we see the (1,1) double roll twice as much as the others, it changes the results from 1/11 to 2/12... making the actual result 1/6.  
 
 
-#Intuitive Walkthrough
+# Intuitive Walkthrough
 The 11 permutations of dice A and dice B:
 (1,1)  - the only set of doubles
 (1,2) (1,3) (1,4) (1,5) (1,6)
@@ -48,7 +48,7 @@ Now if these results had been hidden from a viewer, and this viewer randomly pea
 
 What this set represents is the outcomes that will be detected as having at least one 1 upon peaking, if we rolled the dice 72 times.  Now we can do our calculation on how many of the outcomes were dobule 1's (1,1).  There are 12 dice rolls that matched our criteria, and 2 had double 1's. The result is that 2/12 have doubles, or 1/6 .  
 
-#Programming results:
+# Programming results:
 Here is th output from my programming
 
 Sample Size: 900000 
