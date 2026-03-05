@@ -2,10 +2,10 @@
 
 # Background and Explanation
 
-A person rolls two dice, hidden from view.  They peek at one of the dice, and says "I saw one of the dice and it was a 1" or "At least one of the dice was a 1". You are then asked what are the odds that the other dice also is a 1? The official explanation is that the answer is 1/11 . The actual answer is 1/6. We will now explore why the official answer is wrong and why our python code detects 1/6. 
+A person rolls two dice, hidden from view.  They peek at one of the dice, and says "I saw one of the dice and it was a 1" or "At least one of the dice was a 1". You are then asked what are the odds that the other dice also is a 1? The classical mainstream explanation is that the answer is 1/11 . The actual answer is 1/6. We will now explore why the official answer is wrong and why our python code detects 1/6. 
 
 # About The Program
-The program is designed to walk through the exact same scenario.  The dice are "rolled" using random number generation.  Another random number is generated to determine which dies is "peeked at".  We then check the other dice to see if its a double, and we record the success and failures of each individual number. At the end of the program, the results are displayed with the percents displayed in decimal form.  
+The program is designed to walk through the exact same scenario.  The dice are "rolled" using random number generation.  Another random number is generated to determine which dice are "peeked at".  We then check the other dice to see if its a double, and we record the success and failures of each individual number. At the end of the program, the results are displayed with the percents displayed in decimal form.  
 
 # Probabilities and Explanation
 There are 11 permutations of dice A and dice B with a 1 in it:
@@ -22,7 +22,7 @@ If we were to (incorrectly) treat them all as being detected at equal rates, thi
 
 The reason is that the person rolling a dice will always peek and see a 1 when there are two 1's.  Every single time two 1's are rolled, and a person peeks, they have no choice but to see a 1.  There are no other possibilities. So when the roll is (1,1), a 1 will be detected on peeking 100% of the time.  
 
-Now, this is not true for a roll with only a single 1 in it.  For example, lets take a look at rolls of 1,6 or 3,1 .  Half of the time, the dice roller will peek at one of the dice and simply not see a 1. So for pairs like 1,6 and 3,1 , we have only a 50% chance of detecting the 1.  For instance if we roll a 3,1 and randomly peek at one of the dice, we might see a 3 instead of the 1. If we detect a 3 when we peek, we would then be asked what are the odds that there is another 3.  Since we are determining the odds for double 1's, this incident where we peeked and detected a 3 is discarded. It is not relevant and we never learn about that other 1 in the roll. It is never detected.  Of course there is a 50% chance the dice roller will peek and see a 1, so sometimes they will in fact see a 1, but the main takeaway is that half the time this doesn't happen. 
+Now, this is not true for a roll with only a single 1 in it.  For example, lets take a look at rolls of 1,6 or 3,1 .  Half of the time, the dice roller will peek at one of the dice and simply not speak about a 1. So for pairs like 1,6 and 3,1 , we have only a 50% chance of mentioning the 1.  For instance if we roll a 3,1 we might make a statement about the 3 instead of the 1 . If we mention a 3 when we peek, we would then be asked what are the odds that there is another 3.  Since we are determining the odds for double 1's, this incident where we peeked and detected a 3 is discarded. It is not relevant and we never learn about that other 1 in the roll. It is never detected and never part of our calculations.  Of course there is a 50% chance the dice roller will peek and mention a 1, but the main takeaway is that half the time this doesn't happen. 
 
 The end result of the difference in the rate of detection between double 1's (1,1) and all other rolls with at least one 1 (1,x or x,1) is that the double 1's (1,1) are detected twice as much as all other pairs (1,x). This is what inevitable makes the 1/11 calculation wrong. Since we see the (1,1) double roll twice as much as the others, it changes the results from 1/11 to 2/12... making the actual result 1/6.  
 
