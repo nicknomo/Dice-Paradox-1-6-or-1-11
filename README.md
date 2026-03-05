@@ -2,7 +2,7 @@
 
 # Background and Explanation
 
-A person rolls two dice, hidden from view.  They peek at one of the dice, and says "I saw one of the dice and it was a 1". You are then asked what are the odds that the other dice also is a 1? The official explanation is that the answer is 1/11 . The actual answer is 1/6. We will now explore why the official answer is wrong and why our python code detects 1/6. 
+A person rolls two dice, hidden from view.  They peek at one of the dice, and says "I saw one of the dice and it was a 1" or "At least one of the dice was a 1". You are then asked what are the odds that the other dice also is a 1? The official explanation is that the answer is 1/11 . The actual answer is 1/6. We will now explore why the official answer is wrong and why our python code detects 1/6. 
 
 # About The Program
 The program is designed to walk through the exact same scenario.  The dice are "rolled" using random number generation.  Another random number is generated to determine which dies is "peeked at".  We then check the other dice to see if its a double, and we record the success and failures of each individual number. At the end of the program, the results are displayed with the percents displayed in decimal form.  
