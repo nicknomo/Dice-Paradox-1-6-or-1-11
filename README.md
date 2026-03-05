@@ -71,6 +71,18 @@ Now if these results had been hidden from a viewer, and this viewer randomly pee
 
 What this set represents is the outcomes that will be detected as having at least one 1 upon peeking, if we rolled the dice 72 times.  Now we can do our calculation on how many of the outcomes were dobule 1's (1,1).  There are 12 dice rolls that matched our criteria, and 2 had double 1's. The result is that 2/12 have doubles, or 1/6 .  
 
+# Why Does Everyone Do The Math Wrong?
+
+  When the dice roller says "at least one of the dice was a 1", everyone jumps straight into calculating the probability without considering the process being taken that lead to this. They find the conditional probability where at least one of the dice was a 1, and the other die was a 1.  It seems like a no brainer, and it sounds obvious. 
+
+  The problem, however, is that what the dice roller says doesn't matter.  It's how he makes his selection.  In order for the math that produces 1/11 to be accurate, where they calculate where at least one of the die was a 1 and if the other was a 1.... then the dice roller would have to specifically be looking for a 1, each and every time. If there was no 1, he'd say nothing.  If there was a mixed pair, he would always have to mention the 1 and never the other number.  
+
+  While this is a possible, if not biased, way of conducting multiple dice rolls... the big issue with this is that the scenario involves a single dice roll. Realistically, the dice roller has to say *something* . He doesn't know what numbers are going to appear, so he can't possibly have a preference (e.g. where he will only mention a 1 ). The way he selects the dice has to be random. So regardless of what he says when he sees the dice ( "there is at least one 1", "Die A is a 1", "the die on the left is a 1" ), the selection was random. The exact wording of what the dice roller said when he spoke of the number cannot change the probability.  Only the random way he selected it does that. In short, the classical method is simply calculating as if the dice roller spoke about a "1" every time at least one of the dice was a 1.  If we recognize that shouldn't happen, then we can't use that method.
+
+  If the selection is random, then we are forced to account for how often the "1" will be mentioned for each roll.  As I wrote before, the "1" will be mentioned twice as often with doubles. This leads to a 1/6 probability.
+
+  The important takeaway is that the method of selection is all that matters.  The confusing part is that the statements made in any given scenario do not necessaril relate to how the selections were made. This is what causes most calculation errors in every statistical paradox. 
+
 
 # Programming results:
 Here is the output from my programming
