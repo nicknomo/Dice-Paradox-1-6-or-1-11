@@ -81,7 +81,7 @@ What this set represents is the outcomes that will be detected as having at leas
 
   If the selection is random, then we are forced to account for how often the "1" will be mentioned for each roll.  As I wrote before, the "1" will be mentioned twice as often with doubles. This leads to a 1/6 probability.
 
-  The important takeaway is that the method of selection is all that matters.  The confusing part is that the statements made in any given scenario do not necessaril relate to how the selections were made. This is what causes most calculation errors in every statistical paradox. 
+  The important takeaway is that the method of selection is all that matters.  The confusing part is that the statements made in any given scenario do not necessarily relate to how the selections were made. This is what causes most calculation errors in every statistical paradox. 
 
 
 # Programming results:
